@@ -49,10 +49,9 @@ It validates transition definitions when the state machine triggered and then pr
 
 ## Demo - (`Microwave Oven`)
 
+Here is the demonstration of cooking foods in the microwave.
 
 ![](./state_machine_microwave_demo.svg)
-
-Here is the demonstration of cooking foods in the microwave.
 
 **Firstly,** we are defining the `State` and `Event`
 
