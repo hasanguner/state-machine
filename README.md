@@ -5,7 +5,8 @@ Project aims building `Finite State Machine` with a human friendly dsl in Kotlin
 
 ## Installation
 
-Affer adding the JitPack repository and project dependency to your build file. It is ready to go!
+It is ready to go after adding the JitPack repository and project dependency to your build file!
+
 
 **Gradle :** 
 
