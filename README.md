@@ -49,7 +49,7 @@ It validates transition definitions when the state machine triggered and then pr
 ## Demo - (`Microwave Oven`)
 
 
-![](demo/State Machine Demo.svg)
+![](https://raw.githubusercontent.com/hasanguner/state-machine/master/demo/State%20Machine%20Demo.svg)
 
 Here is the demonstration of cooking foods in the microwave.
 
