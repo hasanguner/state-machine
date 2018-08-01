@@ -49,7 +49,7 @@ It validates transition definitions when the state machine triggered and then pr
 ## Demo - (`Microwave Oven`)
 
 
-![](https://raw.githubusercontent.com/hasanguner/state-machine/master/demo/State%20Machine%20Demo.svg)
+![](./state_machine_microwave_demo.svg)
 
 Here is the demonstration of cooking foods in the microwave.
 
@@ -101,6 +101,7 @@ enum class Event {
     }
 ~~~
 
+**Lets run it!**
 
 ~~~kotlin
     println("-Initial State : [${stateMachine.currentState}]")
@@ -124,8 +125,6 @@ enum class Event {
 
     println("-Final State : [${stateMachine.currentState}]")
 ~~~
-
-**Lets run it!**
 
 Output:
 
