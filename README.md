@@ -19,7 +19,7 @@ It is ready to go after adding the JitPack repository and project dependency to 
 	}
 	
 	dependencies {
-    	implementation 'com.github.hasanguner:statemachine:0.1.0'
+    	compile 'com.github.hasanguner:state-machine:0.1.2'
    	}
 ~~~
 
@@ -36,8 +36,8 @@ It is ready to go after adding the JitPack repository and project dependency to 
 	...
     <dependency>
         <groupId>com.github.hasanguner</groupId>
-       <artifactId>statemachine</artifactId>
-   	    <version>0.1.0</version>
+       <artifactId>state-machine</artifactId>
+   	    <version>0.1.2</version>
    	</dependency>
 ~~~
 
