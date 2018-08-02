@@ -26,9 +26,10 @@ compileTestKotlin {
 
 repositories {
     mavenCentral()
+    maven { url 'https://jitpack.io' }
 }
 
 dependencies {
     compile "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlinVersion"
-    compile rootProject
+    compile 'com.github.hasanguner:state-machine:0.1.2'
 }
