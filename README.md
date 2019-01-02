@@ -19,7 +19,7 @@ allprojects {
 }
 
 dependencies {
-    compile 'com.github.hasanguner:state-machine:0.2.0'
+    compile 'com.github.hasanguner:state-machine:0.2.1'
 }
 ~~~
 
@@ -37,7 +37,7 @@ dependencies {
  <dependency>
     <groupId>com.github.hasanguner</groupId>
     <artifactId>state-machine</artifactId>
-    <version>0.2.0</version>
+    <version>0.2.1</version>
 </dependency>
 ~~~
 

@@ -31,5 +31,5 @@ repositories {
 
 dependencies {
     compile "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlinVersion"
-    compile 'com.github.hasanguner:state-machine:0.2.0'
+    compile 'com.github.hasanguner:state-machine:0.2.1'
 }
