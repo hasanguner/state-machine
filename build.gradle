@@ -1,6 +1,7 @@
 buildscript {
     ext {
         kotlinVersion = "1.2.21"
+        groovyVersion = "2.4.9"
     }
 
     repositories {
@@ -33,7 +34,7 @@ repositories {
 
 dependencies {
     compile "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlinVersion"
-    testCompile "org.codehaus.groovy:groovy-all"
+    testCompile "org.codehaus.groovy:groovy-all:$groovyVersion"
     testCompile "org.spockframework:spock-core:1.1-groovy-2.4-rc-4"
     testCompile "junit:junit:4.12"
 }
