@@ -3,8 +3,8 @@ package net.hasanguner.statemachine;
 import org.junit.Before;
 import org.junit.Test;
 
-import static net.hasanguner.statemachine.FunctionUtils.action;
 import static junit.framework.TestCase.assertEquals;
+import static net.hasanguner.statemachine.FunctionUtils.action;
 
 public class StateMachineJavaTest {
 
@@ -31,6 +31,10 @@ public class StateMachineJavaTest {
             );
 
             it.shouldMove().to(State.D).on(Event.Z);
+
+            it.shouldExecuteOnTransition(action(
+                    transition -> System.out.println("I'm executed on every transition. Transition : " + transition))
+            );
 
             return it;
         });
