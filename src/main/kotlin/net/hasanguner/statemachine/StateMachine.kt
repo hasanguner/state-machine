@@ -1,11 +1,16 @@
 package net.hasanguner.statemachine
 
-class StateMachine<S : Any, E : Any> private constructor(entryState: S, private val transitions: Set<StateTransition<S, E>>) {
+class StateMachine<S : Any, E : Any> private constructor(
+        entryState: S,
+        private val transitions: Set<StateTransition<S, E>>,
+        private val onTransitionCallback: ((StateTransition<S, E>) -> Unit)
+) {
 
     var currentState: S = entryState
 
     fun evaluate(event: E) = validate(event)
             .also { currentState = it.to }
+            .also(onTransitionCallback)
             .action(currentState)
 
     private fun validate(event: E): StateTransition<S, E> =
@@ -21,6 +26,7 @@ class StateMachine<S : Any, E : Any> private constructor(entryState: S, private 
     class StateMachineBuilder<S : Any, E : Any> internal constructor(private val entryState: S) {
 
         private val transitions = mutableSetOf<StateTransition<S, E>>()
+        private var onTransitionCallback: (StateTransition<S, E>) -> Unit = {}
 
         fun shouldMove(): StateTransitionBuilder<S, E> = StateTransitionBuilder {
             transitions += it.build()
@@ -37,7 +43,13 @@ class StateMachine<S : Any, E : Any> private constructor(entryState: S, private 
             this@StateMachineBuilder
         }.apply { to(state) }
 
-        internal fun build(): StateMachine<S, E> = StateMachine(entryState, transitions)
+        fun shouldExecuteOnTransition(action: (StateTransition<S, E>) -> Unit): StateMachineBuilder<S, E> = onTransition(action)
+
+        fun onTransition(action: (StateTransition<S, E>) -> Unit): StateMachineBuilder<S, E> = apply {
+            onTransitionCallback = action
+        }
+
+        internal fun build(): StateMachine<S, E> = StateMachine(entryState, transitions, onTransitionCallback)
 
     }
 

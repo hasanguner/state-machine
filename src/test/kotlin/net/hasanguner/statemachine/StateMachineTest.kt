@@ -29,6 +29,10 @@ class StateMachineTest {
             }
 
             shouldMoveTo(State.D).on(Event.Z)
+
+            onTransition {
+                println("I'm executed on every transition. $it")
+            }
         }
     }
 
