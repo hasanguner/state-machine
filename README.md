@@ -11,34 +11,34 @@ It is ready to go after adding the JitPack repository and project dependency to 
 **Gradle :** 
 
 ~~~groovy
-	allprojects {
-		repositories {
-			...
-			maven { url 'https://jitpack.io' }
-		}
-	}
-	
-	dependencies {
-    	compile 'com.github.hasanguner:state-machine:0.1.2'
-   	}
+allprojects {
+    repositories {
+        ...
+        maven { url 'https://jitpack.io' }
+    }
+}
+
+dependencies {
+    compile 'com.github.hasanguner:state-machine:0.2.0'
+}
 ~~~
 
 **Maven :** 
 
 ~~~xml
 
-    <repositories>
-        <repository>
-            <id>jitpack.io</id>
-            <url>https://jitpack.io</url>
-        </repository>
-    </repositories>
-	...
-    <dependency>
-        <groupId>com.github.hasanguner</groupId>
-       <artifactId>state-machine</artifactId>
-   	    <version>0.1.2</version>
-   	</dependency>
+ <repositories>
+    <repository>
+        <id>jitpack.io</id>
+         <url>https://jitpack.io</url>
+    </repository>
+ </repositories>
+...
+ <dependency>
+    <groupId>com.github.hasanguner</groupId>
+    <artifactId>state-machine</artifactId>
+    <version>0.2.0</version>
+</dependency>
 ~~~
 
 
